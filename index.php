@@ -1,4 +1,4 @@
-<php
+<?php
 	$conn = mysqli_connect("172.20.0.2","root","uaspass","trucorp");
 	if (!$conn){
 		echo "Tidak bisa connect ke MySQL" . PHP_EOL;
