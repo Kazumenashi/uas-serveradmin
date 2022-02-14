@@ -7,24 +7,10 @@
 ?>
 
 <table>
-	<tr>
-		<th>ID</th>
-		<th>Nama</th>
-		<th>Alamat</th>
-		<th>Jabatan</th>
-	</tr>
 	<?php
 		$qry = "SELECT * FROM users";
 		$res = $conn->query($qry);
-		while($row = $res->fetch_assoc()){
-		?>
-			<tr>
-				<td><?= $row["ID"] ?></td>
-				<td><?= $row["Nama"] ?></td>
-				<td><?= $row["Alamat"] ?></td>
-				<td><?= $row["Jabatan"] ?></td>
-			</tr>
-		<?php
-		}
-		?>
+		$count = mysqli_num_rows($res);
+		echo "Total jumlah user yang ada di database: " . $count;
+	?>
 </table>
